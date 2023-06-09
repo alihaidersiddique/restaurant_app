@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_app/Onboarding/Onboarding_2.dart';
 
 class Welcome1 extends StatelessWidget {
   const Welcome1({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class Welcome1 extends StatelessWidget {
                   color: Colors.red, fontSize: 32, fontWeight: FontWeight.w600),
             ),
             const Text(
-              'Fresh food made from the finest\ningridients and always served hot!',
+              'Serving You Quick & Easy\nRound the Clock!',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             ),
@@ -41,7 +42,8 @@ class Welcome1 extends StatelessWidget {
                 children: [
                   Container(
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                      },
                       child: const Text('Skip',
                           style: TextStyle(
                               color: Colors.black,
@@ -55,7 +57,10 @@ class Welcome1 extends StatelessWidget {
                   ),
                   Container(
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: ((context) => (const Welcome2()))));
+                      },
                       child: const Text('Next',
                           style: TextStyle(
                               color: Colors.red, fontWeight: FontWeight.bold)),
