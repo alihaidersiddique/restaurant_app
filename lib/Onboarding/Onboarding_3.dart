@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/Onboarding/Onboarding_2.dart';
 
-class Welcome1 extends StatelessWidget {
-  const Welcome1({Key? key}) : super(key: key);
+class Welcome3 extends StatelessWidget {
+  const Welcome3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,23 +12,25 @@ class Welcome1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const SizedBox(
-              height: 33,
+              height: 30,
             ),
             Flexible(
-              flex: 1,
-              child: Image.asset(
-                'images/first.png',
+              flex: 2,
+              child: Container(
+                height: 350,
+                width: 500,
+                child: Image.asset(
+                  'images/easy-payment.png',
+                ),
               ),
             ),
-            const SizedBox(
-              height: 50,
-            ),
+
             const Flexible(
               flex: 1,
               child: Column(
                 children: [
                   Text(
-                    '\nFresh Food',
+                    'Easy Payment',
                     style: TextStyle(
                       color: Colors.red,
                       fontSize: 33,
@@ -37,7 +38,7 @@ class Welcome1 extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '\nFresh food made from the finest\ningredients and always served hot!',
+                    '\nSimply Pay Cash on Delivery!',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
                   ),
@@ -53,7 +54,7 @@ class Welcome1 extends StatelessWidget {
                     child: TextButton(
                       onPressed: () {},
                       child: const Text(
-                        'Skip',
+                        '',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -70,10 +71,7 @@ class Welcome1 extends StatelessWidget {
                 Flexible(
                   child: Container(
                     child: TextButton(
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: ((context) => (const Welcome2()))));
-                      },
+                      onPressed: () {},
                       child: const Text(
                         'Next',
                         style: TextStyle(
@@ -87,6 +85,9 @@ class Welcome1 extends StatelessWidget {
 
               ],
             ),
+            // const SizedBox(
+            //   height: 0.1,
+            // )
           ],
         ),
       ),

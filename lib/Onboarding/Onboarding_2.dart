@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Onboarding_3.dart';
+
 class Welcome2 extends StatelessWidget {
   const Welcome2({Key? key}) : super(key: key);
 
@@ -12,32 +14,36 @@ class Welcome2 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const SizedBox(
-              height: 50,
+              height: 33,
             ),
-            Expanded(
+            Flexible(
+              flex: 2,
               child: Image.asset(
                 'images/delivery.png',
               ),
             ),
-            const SizedBox(
-              height: 50,
-            ),
-            const Text(
-              'Fast Delivery',
-              style: TextStyle(
-                color: Colors.red,
-                fontSize: 32,
-                fontWeight: FontWeight.w600,
+
+            const Flexible(
+              flex: 1,
+              child: Column(
+                children: [
+                  Text(
+                    '\nFast Delivery',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 33,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    '\nServing You Quick & Easy\nRound the Clock!',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
+                  ),
+                ],
               ),
             ),
-            const Text(
-              'Fresh food made from the finest\ningredients and always served hot!',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -63,7 +69,10 @@ class Welcome2 extends StatelessWidget {
                 Flexible(
                   child: Container(
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: ((context) => (const Welcome3()))));
+                      },
                       child: const Text(
                         'Next',
                         style: TextStyle(
@@ -74,8 +83,12 @@ class Welcome2 extends StatelessWidget {
                     ),
                   ),
                 ),
+
               ],
             ),
+            // const SizedBox(
+            //   height: 0.1,
+            // )
           ],
         ),
       ),
