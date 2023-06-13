@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../login-signUp/login_page.dart';
+
 class Welcome3 extends StatelessWidget {
   const Welcome3({Key? key}) : super(key: key);
 
@@ -71,7 +73,10 @@ class Welcome3 extends StatelessWidget {
                 Flexible(
                   child: Container(
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: ((context) => (LoginPage()))));
+                      },
                       child: const Text(
                         'Next',
                         style: TextStyle(
