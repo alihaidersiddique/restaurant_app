@@ -2,28 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant_app/Onboarding/Onboarding_2.dart';
 
-class Person {
-  final String name;
-  final int age;
-
-  Person({required this.name, required this.age});
-
-  dynamic operator [](String field) {
-    switch (field) {
-      case 'name':
-        return name;
-      case 'age':
-        return age;
-      default:
-        throw ArgumentError('Invalid field: $field');
-    }
-  }
-}
-
-final person = Person(name: 'John', age: 30);
-final name = person['name']; // Access the name field using the [] operator
-final age = person['age']; // Access the age field using the [] operator
-
 class Welcome1 extends StatelessWidget {
   Welcome1({Key? key}) : super(key: key);
 
@@ -105,7 +83,7 @@ class Welcome1 extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: ((context) => (const Welcome2()))));
+                                builder: ((context) => (Welcome2()))));
                       },
                       child: const Text(
                         'Next',
