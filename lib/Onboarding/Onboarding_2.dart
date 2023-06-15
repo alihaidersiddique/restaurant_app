@@ -11,7 +11,7 @@ class Welcome2 extends StatelessWidget {
 
   // Add a new document to the collection
   addUser() async {
-    await users.add({'name': 'Maarij', 'age': 24});
+    await users.add({'name': 'Maarij Abdul Qadir', 'age': 24});
   }
 
   @override
